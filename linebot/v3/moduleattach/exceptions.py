@@ -12,8 +12,11 @@
 """
 
 
-## あったりなかったりすることが、判明...
-from linebot.v3.moduleattach.models import ErrorResponse
+
+try:
+    from linebot.v3.moduleattach.models import ErrorResponse
+except ImportError as e:
+    ErrorResponse = None
 
 class OpenApiException(Exception):
     """The base exception class for all OpenAPIExceptions"""
@@ -112,7 +115,10 @@ class ApiException(OpenApiException):
             self.headers = http_resp.getheaders()
             self.x_line_request_id = http_resp.getheaders().get("x-line-request-id")
             self.x_line_accepted_request_id = http_resp.getheaders().get("x-line-accepted-request-id")
-            self.error_response = ErrorResponse.from_json(http_resp.data)
+            if ErrorResponse is not None:
+                self.error_response = ErrorResponse.from_json(http_resp.data)
+            else:
+                self.error_response = None
         else:
             self.status = status
             self.reason = reason

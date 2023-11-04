@@ -12,6 +12,9 @@
 """
 
 
+## あったりなかったりすることが、判明...
+from linebot.v3.module.models import ErrorResponse
+
 class OpenApiException(Exception):
     """The base exception class for all OpenAPIExceptions"""
 
@@ -107,22 +110,30 @@ class ApiException(OpenApiException):
             self.reason = http_resp.reason
             self.body = http_resp.data
             self.headers = http_resp.getheaders()
+            self.x_line_request_id = http_resp.getheaders().get("x-line-request-id")
+            self.x_line_accepted_request_id = http_resp.getheaders().get("x-line-accepted-request-id")
+            self.error_response = ErrorResponse.from_json(http_resp.data)
         else:
             self.status = status
             self.reason = reason
             self.body = None
             self.headers = None
+            self.x_line_request_id = None
+            self.x_line_accepted_request_id = None
+            self.error_response = None
 
     def __str__(self):
         """Custom error messages for exception"""
         error_message = "({0})\n"\
                         "Reason: {1}\n".format(self.status, self.reason)
-        if self.headers:
-            error_message += "HTTP response headers: {0}\n".format(
-                self.headers)
-
-        if self.body:
-            error_message += "HTTP response body: {0}\n".format(self.body)
+        if self.x_line_request_id:
+            error_message += "HTTP response headers: (x-line-request-id) {0}\n".format(
+                self.x_line_request_id)
+        if self.x_line_accepted_request_id:
+            error_message += "HTTP response headers: (x-line-accepted-request-id) {0}\n".format(
+                self.x_line_accepted_request_id)
+        if self.error_response:
+            error_message += "HTTP response body: {0}\n".format(self.error_response)
 
         return error_message
 

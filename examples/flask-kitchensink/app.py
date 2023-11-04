@@ -148,7 +148,7 @@ def callback():
     try:
         handler.handle(body, signature)
     except ApiException as e:
-        app.logger.warn("Got exception from LINE Messaging API: %s\n" % e.body)
+        app.logger.warn(f"Got exception from LINE Messaging API: {e.error_response} Status Code: {e.status}\n")
     except InvalidSignatureError:
         abort(400)
 

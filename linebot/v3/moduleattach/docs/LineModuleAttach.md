@@ -25,12 +25,6 @@ from linebot.v3.moduleattach.models.attach_module_response import AttachModuleRe
 from linebot.v3.moduleattach.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://manager.line.biz
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.moduleattach.Configuration(
-    host = "https://manager.line.biz"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that

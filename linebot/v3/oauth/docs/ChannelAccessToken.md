@@ -31,12 +31,6 @@ from linebot.v3.oauth.models.channel_access_token_key_ids_response import Channe
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
-
 
 # Enter a context with an instance of the API client
 with linebot.v3.oauth.ApiClient(configuration) as api_client:
@@ -97,12 +91,6 @@ import linebot.v3.oauth
 from linebot.v3.oauth.models.issue_short_lived_channel_access_token_response import IssueShortLivedChannelAccessTokenResponse
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
 
 
 # Enter a context with an instance of the API client
@@ -168,12 +156,6 @@ from linebot.v3.oauth.models.issue_channel_access_token_response import IssueCha
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
-
 
 # Enter a context with an instance of the API client
 with linebot.v3.oauth.ApiClient(configuration) as api_client:
@@ -236,12 +218,6 @@ import linebot.v3.oauth
 from linebot.v3.oauth.models.issue_stateless_channel_access_token_response import IssueStatelessChannelAccessTokenResponse
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
 
 
 # Enter a context with an instance of the API client
@@ -309,12 +285,6 @@ import linebot.v3.oauth
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
-
 
 # Enter a context with an instance of the API client
 with linebot.v3.oauth.ApiClient(configuration) as api_client:
@@ -370,12 +340,6 @@ import os
 import linebot.v3.oauth
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
 
 
 # Enter a context with an instance of the API client
@@ -438,12 +402,6 @@ from linebot.v3.oauth.models.verify_channel_access_token_response import VerifyC
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
-
 
 # Enter a context with an instance of the API client
 with linebot.v3.oauth.ApiClient(configuration) as api_client:
@@ -502,12 +460,6 @@ import linebot.v3.oauth
 from linebot.v3.oauth.models.verify_channel_access_token_response import VerifyChannelAccessTokenResponse
 from linebot.v3.oauth.rest import ApiException
 from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.oauth.Configuration(
-    host = "https://api.line.me"
-)
 
 
 # Enter a context with an instance of the API client

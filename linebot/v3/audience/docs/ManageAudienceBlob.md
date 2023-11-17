@@ -25,12 +25,6 @@ import linebot.v3.audience
 from linebot.v3.audience.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.audience.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -38,7 +32,7 @@ configuration = linebot.v3.audience.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.audience.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
@@ -102,12 +96,6 @@ from linebot.v3.audience.models.create_audience_group_response import CreateAudi
 from linebot.v3.audience.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.audience.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -115,7 +103,7 @@ configuration = linebot.v3.audience.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.audience.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client

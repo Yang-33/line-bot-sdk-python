@@ -29,12 +29,6 @@ from linebot.v3.insight.models.get_friends_demographics_response import GetFrien
 from linebot.v3.insight.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.insight.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -42,7 +36,7 @@ configuration = linebot.v3.insight.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.insight.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
@@ -100,12 +94,6 @@ from linebot.v3.insight.models.get_message_event_response import GetMessageEvent
 from linebot.v3.insight.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.insight.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -113,7 +101,7 @@ configuration = linebot.v3.insight.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.insight.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
@@ -176,12 +164,6 @@ from linebot.v3.insight.models.get_number_of_followers_response import GetNumber
 from linebot.v3.insight.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.insight.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -189,7 +171,7 @@ configuration = linebot.v3.insight.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.insight.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
@@ -252,12 +234,6 @@ from linebot.v3.insight.models.get_number_of_message_deliveries_response import 
 from linebot.v3.insight.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.insight.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -265,7 +241,7 @@ configuration = linebot.v3.insight.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.insight.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
@@ -328,12 +304,6 @@ from linebot.v3.insight.models.get_statistics_per_unit_response import GetStatis
 from linebot.v3.insight.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.line.me
-# See configuration.py for a list of all supported configuration parameters.
-configuration = linebot.v3.insight.Configuration(
-    host = "https://api.line.me"
-)
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
@@ -341,7 +311,7 @@ configuration = linebot.v3.insight.Configuration(
 
 # Configure Bearer authorization: Bearer
 configuration = linebot.v3.insight.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
+    access_token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
